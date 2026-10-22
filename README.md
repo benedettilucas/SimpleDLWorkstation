@@ -5,7 +5,7 @@ Pré-requisitos:
 - [x] **VS Code**
 - [x] **Git**
 - [x] **Conta Google**
-- [x] (Opicional) **ambiente conda/venv**
+- [x] (Opcional) **ambiente conda/venv**
 ---
 
 ## Alternativa 1: Integração do VS Code com Google Colab para uso de notebooks:
