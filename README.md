@@ -15,9 +15,9 @@ ext install Google.colab
 ```
 Crie um notebook.ipynb e selecione o kernel de execução conforme descrito a seguir:
 
-![Hello World](assets/hello-world.gif)
+<img src="assets/hello-world.gif" alt="Hello World" width="600">
 
-Na opção **'New Colab Server - CPU, GPU, TPU'**, é possível selecionar outros hardwares, como a GPU T4 gratuita. Para finalizar a sessão, basta acessar com `Ctrl+P´ e digitar: `Colab: Remove Server`.
+Na opção **'New Colab Server - CPU, GPU, TPU'**, é possível selecionar outros hardwares, como a GPU T4 gratuita. Para finalizar a sessão, basta acessar com `Ctrl+P` e digitar: `Colab: Remove Server`.
 
 ---
 
