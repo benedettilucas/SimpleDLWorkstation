@@ -1,0 +1,28 @@
+[project]
+name = "workstation"
+description = "Simple repository that implements a deep learning workstation - in progress."
+version = "0.0.1"
+authors = [
+    {name = "Lucas Benedetti", email = "lucasbenedetti.ppgmc@furg.br"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+dynamic = ["dependencies"]
+
+[project.urls]
+Repository = "https://github.com/benedettilucas/SimpleDLWorkstation"
+
+[tool.setuptools.packages.find]
+include = ["workstation*"]
+
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
