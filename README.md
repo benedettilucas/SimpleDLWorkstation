@@ -31,6 +31,7 @@ $ colab new -s vm --gpu t4 # cria uma sessao de VM com GPU T4
 $ colab drivemount -s vm # monta o drive na sessao criada
 $ colab exec -s vm -f scripts/check_vm.py # roda o script python e retorna as especificações de hardware da VM
 $ colab exec -s vm -f scripts/launcher.py --env REPO=LightGlue # acessa e persiste o acesso a um pasta do Google Drive
+$ echo 'pip install -e .' | colab exec -s vm # instala pacote 
 $ colab ssh -s vm # acessa o shell da VM
 $ colab stop -s vm # encerra a sessão da VM
 ```
