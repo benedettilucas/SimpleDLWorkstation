@@ -123,3 +123,29 @@ netstat -ano | grep :8899        # última coluna é o PID (LISTENING)
 tasklist | grep <PID>            # confirma que é um python.exe
 taskkill //PID <PID> //F
 ```
+
+## `sync.py`
+
+Sincroniza as sessões ativas do Google Colab com `sessions.json`, o arquivo de estado usado pelo `colab_proxy.py`. Consulta as atribuições da conta autenticada, registra sessões novas e atualiza token, URL e validade das sessões já registradas. Antes de sobrescrever o estado, salva uma cópia `.bak`; a gravação do arquivo é atômica.
+
+O script usa as credenciais OAuth em `~/.config/colab-cli/token.json` e grava o estado em `~/.config/colab-cli/sessions.json`. Para usar outro diretório, defina `COLAB_CLI_CONFIG_DIR`.
+
+```bash
+python sync.py
+```
+
+Por padrão, os tokens são ocultados nos logs. A opção `--show-tokens` mostra os tokens completos; use-a somente quando necessário e não compartilhe essa saída.
+
+## `launcher.py`
+
+Executa dentro da VM do Colab e muda o diretório de trabalho para um repositório já existente no Google Drive. O nome é recebido pela variável de ambiente `REPO`; o script verifica se ela foi definida, se o caminho permanece dentro da pasta configurada e se o diretório do repositório existe. Em seguida, imprime o diretório de trabalho, lista seus arquivos e informa o PID e o caminho atual.
+
+O caminho-base configurado é `/content/drive/MyDrive/Documentos/Trabalho/workstation_isi/cv-factory`. O Drive precisa estar montado na VM, e o diretório indicado por `REPO` precisa existir dentro dessa pasta.
+
+## `test.py`
+
+Script mínimo de diagnóstico: imprime o PID do processo Python e o diretório de trabalho atual. Não executa testes automatizados nem altera arquivos.
+
+```bash
+python test.py
+```
