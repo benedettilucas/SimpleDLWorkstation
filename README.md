@@ -1,22 +1,32 @@
 # SimpleDLWorkstation
-Repositório para instanciação de Virtual Machine (VM) usando servidores do Google Colab. A ideia deste repositório é simplificar o uso de computação em nuvem integrando um serviço gratuito do Google Colab com a praticidade da IDE do VS Code.
+Repositório para instanciação de Virtual Machine (VM) usando servidores do Google Colab. A ideia deste repositório é simplificar o uso de computação em nuvem integrando um serviço gratuito do Google Colab com a praticidade da IDE do VS Code. 
+
+---
 
 Pré-requisitos:
-- [x] **VS Code**
-- [x] **Git bash**
-- [x] **Google Drive Desktop**
-- [x] **ambiente virtual - conda/venv** (Opcional)
+- Python;
+- VS Code;
+- Git bash;
+- Google Drive Desktop;
+- Ambiente virtual (conda/venv) - Opcional.
+
+Funcionalidades:
+- [x] Integração VS Code e Colab VM via notebooks;
+- [x] Integração VS Code e Colab VM via google-colab-cli;
+- [ ] Módulo `workstation` para desenvolvimento em escala e reprodução.
+
 ---
 
 ### <a id="passo-1"></a>Passo 1: instalação das dependências
-- Instalar Google Drive para desktop: `https://ipv4.google.com/intl/pt-BR/drive/download/`
+- Instalar Anaconda: https://www.anaconda.com/download (Opcional)
+- Instalar Google Drive para desktop: https://ipv4.google.com/intl/pt-BR/drive/download/
 - Criar no Google Drive, uma pasta para ser seu ambiente de trabalho (workstation).
 - Abrir o VS Code e selecionar o ambiente localmente (O padrão do Google Drive Desktop cria um disco `G:` na aba meu computador.)
 
-### Passo 2: instalação das dependências
+### Passo 2: instalação das dependências locais
 Após abrir o ambiente de trabalho no VS Code, deve-se instalar a dependência do `google-colab-cli`:
 ```bash
-$ conda create -n ws python # opcional, mas é uma boa prática
+$ conda create -n ws python # opcional
 $ conda activate ws
 $ git clone https://github.com/benedettilucas/SimpleDLWorkstation.git
 $ cd SimpleDLWorkstation/
@@ -48,6 +58,10 @@ Na opção **'New Colab Server - CPU, GPU, TPU'**, é possível selecionar outro
 
 ---
 
-Links úteis:
+Links úteise outras informações:
 - https://marketplace.visualstudio.com/items?itemName=Google.colab
 - https://github.com/googlecolab/google-colab-cli
+- Caso conda não inicialize automaticamente ao abrir seu terminal (cmd/bash), abra o Anaconda prompt e digite o comando:
+```bash
+$ conda init --all
+```
