@@ -1,1 +1,2 @@
 google-colab-cli @ git+https://github.com/benedettilucas/google-colab-cli-ws@f53caab
+aiohttp
