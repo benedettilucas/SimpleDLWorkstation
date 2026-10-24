@@ -1,1 +1,6 @@
 workstation.egg-info
+/workstation/*
+!/workstation/src/
+!/workstation/repositories/
+/workstation/repositories/*
+!/workstation/repositories/.gitkeep
