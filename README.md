@@ -20,7 +20,7 @@ $ conda create -n ws python # opcional, mas é uma boa prática
 $ conda activate ws
 $ git clone https://github.com/benedettilucas/SimpleDLWorkstation.git
 $ cd SimpleDLWorkstation/
-$ pip install -r requirements.txt
+$ pip install -e .
 ```
 
 ---
