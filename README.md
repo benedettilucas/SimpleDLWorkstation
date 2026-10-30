@@ -36,6 +36,13 @@ $ colab ssh -s vm # acessa o shell da VM
 $ colab stop -s vm # encerra a sessão da VM
 ```
 
+### Exportar os pacotes instalados no Colab
+Para gerar um arquivo Conda YAML com a versão do Python e as versões dos pacotes instalados no runtime:
+```bash
+$ python scripts/export_colab_environment.py
+```
+O comando cria `environment.yml` no diretório atual. Para escolher outro caminho, use `--output`; para imprimir o YAML no terminal, use `--output -`.
+
 ## Alternativa: Simples integração do VS Code com Google Colab para uso de notebooks:
 Após realizar o [Passo 1](#passo-1), acesse o Quick Open do VS Code usando o comando `Ctrl+P` e digite:
 ```bash
