@@ -4,3 +4,7 @@ workstation.egg-info
 !/workstation/repositories/
 /workstation/repositories/*
 !/workstation/repositories/.gitkeep
+!/workstation/data/
+/workstation/data/*
+!/workstation/data/.gitkeep
+
